@@ -8,6 +8,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -19,21 +22,20 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     min-height: 70px;
     border-bottom: #77d8d8 3px solid;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
 ul {
@@ -44,12 +46,13 @@ ul {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-right: 20px;
 }
 
 .dropbtn {
     background-color: #77d8d8;
     color: white;
-    padding: 16px;
+    padding: 12px 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -85,6 +88,15 @@ ul {
 
 main {
     margin: 20px 0;
+    flex-grow: 1;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -92,7 +104,8 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
-    position: absolute;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    margin-top: auto;
 }
