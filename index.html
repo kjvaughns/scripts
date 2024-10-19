@@ -1,42 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Phone Scripts - Arias Florida</title>
-    <link rel="icon" href="images/scripticon.ico" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="scripticon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
+        <!-- Left Column -->
         <div class="left-column">
             <div>
+                <!-- Dropdown for script selection -->
                 <select id="myDropdown" onchange="handleSelection()" class="dropdown-option">
-                    <option value="HARDCARD" selected>HARDCARD</option>
-                    <option value="WILLKIT">WILLKIT</option>
-                    <option value="CHILDSAFE">CHILDSAFE</option>
-                    <option value="REFERRAL">REFERRAL</option>
+                    <option value="REFERRAL" selected>REFERRAL</option>
+                    <option value="INS_REF">INS REF</option>
+                    <option value="POS">POS</option>
+                    <option value="LAPSED_POS">LAPSED POS</option>
+                    <option value="POLICY_SERVICE">POLICY SERVICE SCRIPTS</option>
                 </select>
-                <input type="checkbox" id="singleCheckbox" onclick="togglesingle()" style="width: unset;">
-                <span class="cb-text">SINGLE</span>
+
+                <!-- Input fields -->
+                <input type="checkbox" id="singleCheckbox" onclick="togglesingle()" style="width: unset;"><span class="cb-text">SINGLE</span>
                 <input type="text" id="memberInput" placeholder="MEMBER" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
                 <input type="text" id="spouseInput" placeholder="SPOUSE" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-                <span class="script-type HARDCARD">
-                    <input type="text" id="groupInput" placeholder="GROUP" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-                </span>
-                <span class="script-type REFERRAL">
-                    <input type="text" id="sponsorInput" placeholder="SPONSOR" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-                    <input type="text" id="sponsorgroupInput" placeholder="GROUP" oninput="validateInput(this); toggleUnion()" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-                </span>
+                <input type="text" id="groupInput" placeholder="GROUP" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
                 <input type="text" id="agentName" placeholder="AGENT" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
             </div>
-            <!-- Add script type content here -->
+
+            <!-- Script Sections -->
+            <span class="script-type REFERRAL">
+                <div class="phone-step-container">
+                    <span class="phone-step">INTRO</span><br>
+                    Hi <span class="VERBALChar memberDisplay">MEMBER</span>? Hey <span class="VERBALChar memberDisplay">MEMBER</span>, this is <span class="VERBALChar agentDisplay">AGENT</span> with American Income. Did your (RELATIONSHIP) <span class="VERBALChar sponsorDisplay">SPONSOR</span> let you know I would be giving you a call?
+                    <p><strong>If NO:</strong> They didn't? <span class="TECHNICALChar">Act surprised</span> Well, <span class="VERBALChar sponsorDisplay">SPONSOR</span> promised me they would tell you about it! No worries though! They probably wanted me to explain it to you personally.</p>
+                    <p><strong>If YES:</strong> Great!</p>
+
+                    <span class="phone-step">REASON FOR CALLING</span><br>
+                    So I was calling because <span class="VERBALChar sponsorDisplay">SPONSOR</span> sponsored you in to receive our free union benefits program. Basically, it's a benefit package that comes with a nice healthcare discount, a child safety kit, which protects the kids if any in the event of an emergency, a free will kit, and a permanent family care program. Do you have a spouse or significant other that you usually handle important information with or is it usually just you?
+
+                    <span class="phone-step">SETTING THE APPOINTMENT</span><br>
+                    We do everything over a quick video meeting. Did I catch you at work or did I catch you at home? <strong>SWITCH TO INSTANT IF HOME</strong><br>
+                    <p><strong>If not home:</strong> So I do run a pretty busy schedule but I do have some time available today, would later on today be good for you?</p>
+                    <p><strong>If yes:</strong> Okay perfect, I have a TIME and TIME available, which one works best?</p>
+                    <p><strong>If no:</strong> So, when would be a good day for you? Okay perfect, I do run a super busy schedule but I do have a TIME and TIME available then, which one works best for you?</p>
+
+                    <span class="phone-step">SOLIDIFY THE APPOINTMENT</span><br>
+                    Okay perfect, What’s a good email for you? And Is this a good number to text? I’m going to send you a confirmation message and a couple reminders. Now if something comes up promise me that you will shoot me a message, this is my personal line that we’re on. Now, <span class="VERBALChar memberDisplay">MEMBER</span>, if I save that spot for you then I can’t save it for another family. Do you see ANY reason why DAY at TIME would not work? It's very IMPORTANT that you’re both there. Sound good? Awesome! I’ll be on DAY at TIME. If for some reason I’m running behind, I’ll be sure to call you.
+                    <br><br>
+                    <strong>Extra Solidification:</strong> Okay great! Do me a favor, go ahead and grab a pen and paper (or pull up the notes app on your phone), I have some very important information that I need you to put down. Let me know when you’re ready.<br>
+                    First, please write down my name: Kaeden<br>
+                    Next, please write down the appointment time: DAY at TIME<br>
+                    And lastly we’ll be using Zoom Meeting, so please make sure you have it downloaded before our meeting. I will be sending the meeting information before our appointment.
+                </div>
+            </span>
+
+            <span class="script-type INS_REF">
+                <div class="phone-step-container">
+                    <span class="phone-step">INTRO</span><br>
+                    Hi <span class="VERBALChar memberDisplay">MEMBER</span>? Hey <span class="VERBALChar memberDisplay">MEMBER</span>, this is <span class="VERBALChar agentDisplay">AGENT</span> with American Income. Did your (RELATIONSHIP) <span class="VERBALChar sponsorDisplay">SPONSOR</span> let you know I would be giving you a call?<br>
+                    Thats good the reason I am calling is because <span class="VERBALChar policyholderDisplay">POLICYHOLDER</span> listed you as an emergency contact on their life insurance policy and my job is to setup a quick 10-15 minute meeting with you (and spouse) to go over your responsibilities for being on their policy. We do everything over zoom and its super easy to use. Did I catch you at work or are you at home?
+                    <p><strong>If "No":</strong> Okay, no problem (move to set appointment)</p>
+                    <p><strong>If "Yes":</strong> Okay perfect (roll into appointment)</p>
+
+                    <span class="phone-step">SETTING THE APPOINTMENT</span><br>
+                    My schedule is super booked up, what time do you and the spouse normally get home from work?
+                </div>
+            </span>
+
+            <span class="script-type POS">
+                <div class="phone-step-container">
+                    <span class="phone-step">INTRO</span><br>
+                    Hi <span class="VERBALChar memberDisplay">MEMBER</span>? Hey <span class="VERBALChar memberDisplay">MEMBER</span>, this is <span class="VERBALChar agentDisplay">AGENT</span> with American Income Life, your life insurance company, how are you doing?<br>
+                    Thats good, I was calling because it looks like since your policy has been active for # years now, I guess there’s an update for you and they need a manager going over that with you and the spouse on a 10-15 minute phone call. Did I catch you at work or are you at home?
+                    <p><strong>If "No":</strong> Okay, no problem (move to set appointment)</p>
+                    <p><strong>If "Yes":</strong> Okay perfect (roll into appointment)</p>
+
+                    <span class="phone-step">SETTING THE APPOINTMENT</span><br>
+                    My schedule is super booked up, what time do you and the spouse normally get home from work?
+                </div>
+            </span>
+
+            <span class="script-type LAPSED_POS">
+                <div class="phone-step-container">
+                    <span class="phone-step">INTRO</span><br>
+                    Hi <span class="VERBALChar memberDisplay">MEMBER</span>? Hey <span class="VERBALChar memberDisplay">MEMBER</span>, this is <span class="VERBALChar agentDisplay">AGENT</span> with American Income Life, your life insurance company, how are you doing?<br>
+                    Thats good, I was calling because it looks like your policy had lapsed a while ago, did you happen to change banks or put a lock on your account?
+                    <p><strong>If "No" or they cancelled:</strong> Okay, no problem, what may have been the reason? (try to resell)</p>
+                    <p><strong>If "Yes":</strong> Okay perfect, I guess that's why they had me reach out to you, we can get this taken care of in 10-15 minutes, did I catch you at home or did I catch you at work?</p>
+                    <p><strong>If "No":</strong> Okay, no problem (move to set appointment)</p>
+                    <p><strong>If "Yes":</strong> Okay perfect (roll into appointment)</p>
+
+                    <span class="phone-step">SETTING THE APPOINTMENT</span><br>
+                    My schedule is super booked up, what time do you and the spouse normally get home from work?
+                </div>
+            </span>
+
+            <span class="script-type POLICY_SERVICE">
+                <div class="phone-step-container">
+                    <span class="phone-step">INTRO</span><br>
+                    Hey <span class="VERBALChar memberDisplay">MEMBER</span>, this is <span class="VERBALChar agentDisplay">AGENT</span> with American Income, your life insurance company how are you doing?<br>
+
+                    <span class="phone-step">Reason for calling</span><br>
+                    <p><strong>COD MOD:</strong> I was calling with great news because it looks like you got fully approved for your policy and everything’s good to go. It’s going to be $##.## a month for REVIEW COVERAGE. Is that still comfortable? (if not do PSR to adjust price) Okay perfect, it will draft within 1-5 business days. If you need anything just give me a call, do you have any questions about your coverage before I let you go? Okay great have a great day!</p>
+                </div>
+            </span>
         </div>
+
+        <!-- Right Column -->
         <div class="right-column toggle-hide">
-            <!-- Add dynamic right-column content here -->
+            <!-- This can be used for additional content or dynamically generated responses -->
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function handleSelection() {
+            var dropdown = document.getElementById("myDropdown");
+            var selectedValue = dropdown.value;
+
+            var spans = document.getElementsByClassName("script-type");
+
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].style.display = "none";
+            }
+
+            var selectedSpans = document.getElementsByClassName(selectedValue);
+
+            for (var j = 0; j < selectedSpans.length; j++) {
+                selectedSpans[j].style.display = "inline";
+            }
+        }
+
+        function togglesingle() {
+            var singleCheckbox = document.getElementById("singleCheckbox");
+            var singleSpans = document.getElementsByClassName("single");
+            var coupleSpans = document.getElementsByClassName("couple");
+
+            if (singleCheckbox.checked) {
+                document.getElementById('spouseInput').disabled = true;
+                for (var i = 0; i < singleSpans.length; i++) {
+                    singleSpans[i].style.display = "inline";
+                }
+                for (var j = 0; j < coupleSpans.length; j++) {
+                    coupleSpans[j].style.display = "none";
+                }
+            } else {
+                document.getElementById('spouseInput').disabled = false;
+                for (var k = 0; k < singleSpans.length; k++) {
+                    singleSpans[k].style.display = "none";
+                }
+                for (var l = 0; l < coupleSpans.length; l++) {
+                    coupleSpans[l].style.display = "inline";
+                }
+            }
+        }
+
+        function clearPlaceholder(inputElement) {
+            inputElement.setAttribute('data-placeholder', inputElement.getAttribute('placeholder'));
+            inputElement.setAttribute('placeholder', '');
+        }
+
+        function restorePlaceholder(inputElement) {
+            inputElement.setAttribute('placeholder', inputElement.getAttribute('data-placeholder'));
+        }
+
+        function validateInput(input) {
+            input.value = input.value.replace(/[^a-zA-Z]/g, '');
+        }
+
+        window.addEventListener('load', () => {
+            const savedAgentName = localStorage.getItem('savedAgentName');
+            if (savedAgentName) {
+                agentNameInput.value = savedAgentName;
+                updateDisplay(savedAgentName, '.agentDisplay');
+            }
+        });
+
+        agentNameInput.addEventListener('blur', () => {
+            const newAgentName = agentNameInput.value;
+            localStorage.setItem('savedAgentName', newAgentName);
+        });
+
+        function updateDisplay(inputText, displayText) {
+            document.querySelectorAll(displayText).forEach(element => {
+                element.textContent = inputText;
+            });
+        }
+    </script>
 </body>
 </html>
