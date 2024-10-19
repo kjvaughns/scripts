@@ -1,63 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Phone Scripts - Arias Florida</title>
+    <link rel="icon" href="scription.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Phone Scripts</h1>
-            <nav>
-                <ul class="dropdown">
-                    <li>
-                        <a href="#" class="dropbtn">POS Scripts</a>
-                        <div class="dropdown-content">
-                            <a href="#pos-script">POS Script</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="dropbtn">Retention Scripts</a>
-                        <div class="dropdown-content">
-                            <a href="#retention-script">Retention Script</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<body bindly-id="6e84-9071-2f04" bindly-type="original" bindly="bound" bindly-group-id="bfa2-c64f-e25b">
+    <div class="container flex">
+        <span class="script-type HARDCARD" style="display: inline;">
+            <div class="phone-step-container">
+                <span class="phone-step">INTRO</span>
+                <p>
+                    - Hello, may I speak to <span class="VERBALChar memberDisplay">Member</span>?<br>
+                    This is <span class="VERBALChar agentDisplay">Agent</span> with American Income, Local 277. We handle your benefits through your <span class="VERBALChar groupDisplay">Group</span>.<br>
+                    They sent you a letter a while ago about this and YOU returned a yellow 3x5 inch card. Do you remember doing that?
+                </p>
+            </div>
 
-        <main>
-            <section id="pos-script">
-                <h2>POS Script</h2>
-                <p><strong>INTRO</strong></p>
-                <p>Hi <strong>MEMBER</strong>!? Hey <strong>MEMBER</strong>, this is <strong>NAME</strong> with American Income Life, your life insurance company, how are you doing?</p>
-                <p>That’s good, they had me reach out to you I guess since your policy has been active for # years now, there's a quick update and review and they need a manager going over that with you (and spouse) on a 10-15 minute phone call and I was calling to see if you had a piece of paper or pencil or maybe notes on your phone to take some notes.</p>
-                <p>If <strong>"Yes"</strong>: Okay perfect (roll into appointment)</p>
-                <p>If <strong>"No"</strong>: Okay, no problem (move to set appointment)</p>
-                <p>By the way, how much do you remember about this policy?</p>
-                <h3>SETTING THE APPOINTMENT</h3>
-                <p>We do everything over a quick call. When are you and the spouse available later on today?</p>
-            </section>
+            <div class="phone-step-container">
+                <span class="phone-step">REASON FOR MEETING</span>
+                <p>
+                    - I just need to verify the information <strong>YOU WROTE DOWN</strong>.<br>
+                    - Now, <span class="VERBALChar memberDisplay">Member</span>, <strong>YOU WROTE DOWN</strong> your address as <span class="VERBALChar">(Address)</span>.<br>
+                    Is that correct? Ok great! Next thing, <strong>YOU WROTE DOWN</strong> your date of birth as <span class="VERBALChar">D.O.B.</span>.<br>
+                    Is that correct? For the beneficiary of the life insurance policy, <strong>YOU WROTE DOWN</strong> <span class="VERBALChar">(Beneficiary)</span>. Is that still correct?
+                </p>
+            </div>
 
-            <section id="retention-script">
-                <h2>Retention Script</h2>
-                <p><strong>Intro</strong></p>
-                <p>Hey _____, this is AGENT with American Income your life insurance company, how are you doing?</p>
-                <h3>Reason for calling</h3>
-                <p><strong>COD MOD:</strong> I was calling with great news because it looks like you got fully approved for your policy and everything’s good to go. It’s going to be $____ a month for REVIEW COVERAGE. Is that still comfortable? (If not do PSR to adjust price) Okay perfect, it will draft within 1-5 business days. If you need anything just give me a call, do you have any questions about your coverage before I let you go? Okay great have a great day!</p>
-                <p><strong>MOD WITH CHANGE</strong> (Rateup, RT99, etc): I was calling with great news because it looks like you got fully approved for your policy and everything’s good to go. The only adjustments were ____ REVIEW CHANGES. Do you have any questions? Okay great, your adjusted premium of ____ will react over the next 1-5 business days, then it will draft together starting next month and from here on out. If you ever need anything, please be sure to call me first and I’ll help immediately. I hope you have a great day!</p>
-                <p><strong>LAP NOP:</strong> I was calling because home office sent me an email about your policy this morning, did you happen to change banks or put a lock on your account? We tried to draft for your policy but it returned back to us. It's a super easy fix though! We can 3 way in with home office real fast to authorize the payment and get you caught up.</p>
-                <p>If they say they can’t right now - handle REI email with them or schedule a callback.</p>
-                <p><strong>REOPEN:</strong> I was calling in reference to your coverage you got with us recently, home office attempted to draft the account but it returned back to us, did you happen to change banks? It’s a super easy fix on our end! (Problem Solve) Okay great, so I’m going to get this paperwork sent to home office and it’ll draft from the account over the next 2-7 days. Now after this first one, when do you want it to come out each month? Okay great, please make sure if you ever need anything at all, you call me first and I’ll help immediately! Have a blessed day.</p>
-                <p><strong>REINSTATEMENT:</strong> I was calling because home office sent me an email of lapsed coverages in your area and I came across your profile, were you aware these coverages had lapsed? It’s a super easy fix on our end and I know how important this is for your peace of mind. Do you have 5 mins to take care of this real quick? Okay great (Complete REI Checklist). Now this premium will draft over the next 7-14 days because I have to mail this paperwork to home office. Do you have any questions at all before I let you go today? Okay great, make sure to call me if you ever need anything!</p>
-            </section>
-        </main>
+            <div class="phone-step-container">
+                <span class="phone-step">SETTING THE APPOINTMENT</span>
+                <p>
+                    - We do everything on Zoom now, rather than coming out to your house. Have you ever used Zoom before? Okay great! It’s super easy to use. What time do you <span class="couple"></span> normally get home from work?
+                </p>
+            </div>
+
+            <div class="phone-step-container">
+                <span class="phone-step">SOLIDIFY THE APPOINTMENT</span>
+                <p>
+                    - Do me a favor, grab a pen and paper. I have some very important information that I need you to write down. Let me know when you're ready...<br>
+                    - What's a good email to where I can send the Zoom link? Is this your cell phone number?
+                </p>
+            </div>
+        </span>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
