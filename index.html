@@ -1,51 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Phone Scripts - Arias Florida</title>
-    <link rel="icon" href="scription.ico" type="image/x-icon">
+    <link rel="icon" href="images/scripticon.ico" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
-<body bindly-id="6e84-9071-2f04" bindly-type="original" bindly="bound" bindly-group-id="bfa2-c64f-e25b">
-    <div class="container flex">
-        <span class="script-type HARDCARD" style="display: inline;">
-            <div class="phone-step-container">
-                <span class="phone-step">INTRO</span>
-                <p>
-                    - Hello, may I speak to <span class="VERBALChar memberDisplay">Member</span>?<br>
-                    This is <span class="VERBALChar agentDisplay">Agent</span> with American Income, Local 277. We handle your benefits through your <span class="VERBALChar groupDisplay">Group</span>.<br>
-                    They sent you a letter a while ago about this and YOU returned a yellow 3x5 inch card. Do you remember doing that?
-                </p>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div>
+                <select id="myDropdown" onchange="handleSelection()" class="dropdown-option">
+                    <option value="HARDCARD" selected>HARDCARD</option>
+                    <option value="WILLKIT">WILLKIT</option>
+                    <option value="CHILDSAFE">CHILDSAFE</option>
+                    <option value="REFERRAL">REFERRAL</option>
+                </select>
+                <input type="checkbox" id="singleCheckbox" onclick="togglesingle()" style="width: unset;">
+                <span class="cb-text">SINGLE</span>
+                <input type="text" id="memberInput" placeholder="MEMBER" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                <input type="text" id="spouseInput" placeholder="SPOUSE" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                <span class="script-type HARDCARD">
+                    <input type="text" id="groupInput" placeholder="GROUP" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                </span>
+                <span class="script-type REFERRAL">
+                    <input type="text" id="sponsorInput" placeholder="SPONSOR" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                    <input type="text" id="sponsorgroupInput" placeholder="GROUP" oninput="validateInput(this); toggleUnion()" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                </span>
+                <input type="text" id="agentName" placeholder="AGENT" oninput="validateInput(this)" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
             </div>
-
-            <div class="phone-step-container">
-                <span class="phone-step">REASON FOR MEETING</span>
-                <p>
-                    - I just need to verify the information <strong>YOU WROTE DOWN</strong>.<br>
-                    - Now, <span class="VERBALChar memberDisplay">Member</span>, <strong>YOU WROTE DOWN</strong> your address as <span class="VERBALChar">(Address)</span>.<br>
-                    Is that correct? Ok great! Next thing, <strong>YOU WROTE DOWN</strong> your date of birth as <span class="VERBALChar">D.O.B.</span>.<br>
-                    Is that correct? For the beneficiary of the life insurance policy, <strong>YOU WROTE DOWN</strong> <span class="VERBALChar">(Beneficiary)</span>. Is that still correct?
-                </p>
-            </div>
-
-            <div class="phone-step-container">
-                <span class="phone-step">SETTING THE APPOINTMENT</span>
-                <p>
-                    - We do everything on Zoom now, rather than coming out to your house. Have you ever used Zoom before? Okay great! It’s super easy to use. What time do you <span class="couple"></span> normally get home from work?
-                </p>
-            </div>
-
-            <div class="phone-step-container">
-                <span class="phone-step">SOLIDIFY THE APPOINTMENT</span>
-                <p>
-                    - Do me a favor, grab a pen and paper. I have some very important information that I need you to write down. Let me know when you're ready...<br>
-                    - What's a good email to where I can send the Zoom link? Is this your cell phone number?
-                </p>
-            </div>
-        </span>
+            <!-- Add script type content here -->
+        </div>
+        <div class="right-column toggle-hide">
+            <!-- Add dynamic right-column content here -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
