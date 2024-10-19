@@ -1,25 +1,10 @@
-.indent {
-  display: block;
-  margin-left: 2em;
+/* General Styles */
+body {
+  font-size: clamp(12pt, 1.75vw, 16pt);
+  font-family: "Calibri", sans-serif;
 }
-.phone-step-container {
-  margin: 20px 0;
-}
-.phone-step {
-  font-weight: bold;
-  color: #474c55;
-  opacity: .5;
-  text-decoration: underline;
-  font-size: clamp(14pt, 2vw, 18pt);
-}
-#toggleButton {
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  user-select: none;
-  width: 180px;
-  border: solid 1px black;
-}
+
+/* Container for Two Columns */
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -30,6 +15,8 @@
   align-content: center;
   gap: 5px;
 }
+
+/* Left Column Styling */
 .left-column {
   flex: 1;
   padding: 10px;
@@ -41,6 +28,8 @@
   background-size: cover;
   background-position: center;
 }
+
+/* Right Column Styling */
 .right-column {
   flex: 1;
   padding: 0px 10px;
@@ -52,54 +41,8 @@
   background-size: cover;
   background-position: center;
 }
-.script-content {
-  padding-top: 100px;
-}
-.checkbox-container {
-  display: inline-block;
-}
-.step {
-  color: white;
-  font-weight: bold;
-}
-.closes {
-  background-color: rgba(49, 155, 66, .08);
-  padding: 5px;
-  margin-top: 0px;
-  border-radius: 10px 10px 10px 0;
-}
-.closestab {
-  background-color: rgba(49, 155, 66);
-  padding: 5px;
-  display: inline-block;
-  border-radius: 10px 10px 0 0;
-}
-.objection {
-  font-weight: bold;
-  color: #B25271;
-  text-align: center;
-}
-.hidden {
-  display: none;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-}
-.item {
-  text-align: center;
-}
-.middle {
-  grid-column: 2;
-}
-.middle .item {
-  width: 100%;
-}
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+/* Input Fields */
 input {
   margin: 1px;
   padding: 2px 14px 2px 2px;
@@ -111,14 +54,8 @@ input {
   width: 80px;
   border: solid 1px black;
 }
-ol[type="a"] {
-  margin-top: 0;
-  padding-left: 20px;
-  list-style-type: lower-alpha;
-}
-.single, .SENIOR, .nochildren, .union {
-  display: none;
-}
+
+/* Dropdown Options */
 .dropdown-option {
   cursor: pointer;
   margin: 1px;
@@ -130,12 +67,14 @@ ol[type="a"] {
   border: solid 1px black;
   font-weight: bold;
 }
+
+/* Styling for Button Elements */
 button.showhide {
   font-family: "Calibri", sans-serif;
   font-size: clamp(14pt, 2vw, 18pt);
   font-weight: bold;
   cursor: pointer;
-  padding: 0px 5px;
+  padding: 0px 5px 0px 5px;
   background-color: #319B42;
   color: white;
   border: none;
@@ -147,18 +86,61 @@ button.showhide:hover {
 button.showhide:active {
   background-color: #ED722F;
 }
-body {
-  font-size: clamp(12pt, 1.75vw, 16pt);
+
+/* Header Elements */
+h1 {
+  margin-top: 6px;
+  margin-bottom: 0px;
   font-family: "Calibri", sans-serif;
+  text-decoration: underline;
 }
-.option-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: #00558C;
-  width: 100%;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+/* Script Type and Toggle */
+.hidden, .single, .SENIOR, .nochildren, .union {
+  display: none;
+}
+.script-content {
+  padding-top: 100px;
+}
+.phone-step-container {
+  margin: 20px 0;
+}
+
+/* Phone Steps */
+.phone-step {
+  font-weight: bold;
+  color: #474c55;
+  opacity: .5;
+  text-decoration: underline;
+  font-size: clamp(14pt, 2vw, 18pt);
+}
+
+/* Grid Layout for Steps */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.item {
+  text-align: center;
+}
+.middle {
+  grid-column: 2;
+}
+
+/* Centering Elements */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Checkbox Styling */
+.checkbox-container {
+  display: inline-block;
 }
 .cb-text {
   font-size: clamp(10pt, 1.25vw, 14pt);
@@ -166,72 +148,47 @@ body {
   color: #319B42;
   font-weight: bold;
 }
-.heading {
-  display: flex;
-  align-items: center;
-}
-h1 {
-  margin-top: 6px;
-  margin-bottom: 0px;
+
+/* Specific Character Styling */
+.TECHNICALChar, .VERBALChar, .NON-VERBALChar, .ConditionalChar {
   font-family: "Calibri", sans-serif;
-  text-decoration: underline;
-}
-.smallfont {
-  font-size: clamp(10pt, 1.25vw, 14pt);
-  color: #474C55;
+  font-weight: bold;
 }
 .TECHNICALChar {
-  font-family: "Calibri", sans-serif;
   color: #319B42;
-  font-weight: bold;
-}
-.TECHNICALChar::before, .TECHNICALChar::after {
-  content: "(";
 }
 .VERBALChar {
-  font-family: "Calibri", sans-serif;
   color: #00558C;
-  font-weight: bold;
 }
 .NON-VERBALChar {
-  font-family: "Calibri", sans-serif;
   color: #ED722F;
-  font-weight: bold;
-}
-.NON-VERBALChar::before, .NON-VERBALChar::after {
-  content: "(";
 }
 .ConditionalChar {
-  font-family: "Calibri", sans-serif;
   color: #B25271;
-  font-weight: bold;
 }
-ol {
-  margin-bottom: 0px;
-}
-ul {
-  margin-bottom: 0px;
-  font-family: "Calibri", sans-serif;
-}
-li {
-  font-family: "Calibri", sans-serif;
-}
+
+/* Adjusting for Mobile Devices */
 @media (max-device-width: 1920px) {
-  .phone-step { font-size: clamp(11pt, 1.75vw, 16pt); }
-  input { font-size: clamp(8pt, 1vw, 12pt); }
-  body { font-size: clamp(10pt, 1.5vw, 14pt); }
-  .dropdown-option { font-size: clamp(11pt, 1.75vw, 16pt); }
-  .cb-text { font-size: clamp(8pt, 1vw, 12pt); }
-  button.showhide { font-size: clamp(11pt, 1.75vw, 16pt); }
-  .smallfont { font-size: clamp(8pt, 1vw, 12pt); }
+  .phone-step {
+    font-size: clamp(11pt, 1.75vw, 16pt);
+  }
+  input, .dropdown-option, .cb-text, button.showhide {
+    font-size: clamp(8pt, 1.5vw, 12pt);
+  }
+  body {
+    font-size: clamp(10pt, 1.5vw, 14pt);
+  }
 }
 @media (max-device-width: 1366px) {
-  .phone-step { font-size: clamp(9pt, 1.5vw, 12pt); }
-  input { padding: 2px 10px 2px; font-size: clamp(7pt, .75vw, 10pt); width: 60px; }
-  body { font-size: clamp(8pt, 1.25vw, 11pt); }
-  .phone-step-container { margin: 10px 0; }
-  .dropdown-option { font-size: clamp(9pt, 1.5vw, 12pt); padding: 2px 8px 2px; }
-  .cb-text { font-size: clamp(7pt, .75vw, 10pt); padding: 0px 6px 0px 3px; }
-  button.showhide { font-size: clamp(9pt, 1.5vw, 12pt); }
-  .smallfont { font-size: clamp(7pt, .75vw, 10pt); }
+  .phone-step {
+    font-size: clamp(9pt, 1.5vw, 12pt);
+  }
+  input {
+    padding: 2px 10px 2px 2px;
+    font-size: clamp(7pt, .75vw, 10pt);
+    width: 60px;
+  }
+  body, .dropdown-option, .cb-text, button.showhide {
+    font-size: clamp(8pt, 1.25vw, 11pt);
+  }
 }
