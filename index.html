@@ -21,7 +21,7 @@
                     <option value="LAPSED_POS">LAPSED POS</option>
                     <option value="POLICY_SERVICE">POLICY SERVICE SCRIPTS</option>
                     <option value="REO/REI">REO/REI</option>
-                    <option value="CHILD SAFE KIT">CHILD SAFE KIT</option>
+                    <option value="CHILD SAFE KIT">HARD CARD</option>
                 </select>
 
                 <!-- Input fields -->
@@ -137,20 +137,46 @@
                 </div>
             </span>
 
-            <span class="script-type CHILD SAFE KIT">
-                <div class="phone-step-container">
-                    <span class="phone-step">INTRO</span><br>
-                    Hi <span class="VERBALChar memberDisplay">MEMBER</span>? Hey class="VERBALChar memberDisplay">MEMBER</span> This is <span class="VERBALChar agentDisplay">AGENT</span> with American Income calling about the Child Safe Kits that you recently requested! It looks like you requested # of these, is that still correct or did you need to add more?<p>
-                    
-                    <p> Okay, I need to verify the information you put down so we can help you get your child safety kits activated… you listed your address as (Address). Is that still correct? Perfect! And lastly, you put down your email as ____, is that still correct? 
-                    
-                    <p> The process to activate your child safety kits is super quick and easy, we explain how it works to you real fast over a 10-15 minute phone call. Are you working today? (TRY TO CALL RIGHT INTO IT)    
-                    <p><strong>If NO:</strong> Okay perfect we’ll knock this out real quick then, do you have a spouse or significant other because we need both of you guys to understand how these work. (IF THEY HAVE SPOUSE THAT ISNT HOME ASK… “WHAT TIME DOES YOUR SPOUSE USUALLY GET HOME?) 
-                    <p><strong>If YES:</strong> What time do you normally get home from work? And do you have a spouse or significant other? (IF YES: What time do they get home from work?)</p>
-                    
-                    <p> I can squeeze you in for a quick phone call later today at ___ or at ___ which time works better for you?
-                </div>
-            </span>
+            <span class="script-type HARD CARD">
+    <div class="phone-step-container">
+        <span class="phone-step">INTRO</span><br>
+        <p><em>Hey, <span class="VERBALChar memberDisplay">MEMBER</span>!? This is <span class="VERBALChar agentDisplay">AGENT</span> with American Income. We handle your benefits through your Group. They sent you a letter a while ago, and YOU returned a yellow 3x5 inch card. Do you remember doing that?</em></p>
+
+        <p><strong>If NO:</strong> <em>It looks like you put down <span class="VERBALChar beneficiaryDisplay">BENEFICIARY</span> as your beneficiary. Does that ring a bell?</em></p>
+
+        <hr>
+
+        <span class="phone-step">REASON FOR MEETING</span><br>
+        <p><em>I just need to verify the information YOU WROTE DOWN real quick, and then I’ll explain how to finalize everything.</em></p>
+
+        <p><em>Now, YOU WROTE DOWN your address as (Address). Is that correct?</em></p>
+        <p><em>Great! Next, YOU WROTE DOWN your date of birth as (D.O.B.). Is that correct?</em></p>
+        <p><em>And for the beneficiary of the life insurance policy, YOU WROTE DOWN <span class="VERBALChar beneficiaryDisplay">BENEFICIARY</span>. Is that still correct?</em></p>
+
+        <p><em>Awesome! It looks like you’re one of the members who <strong>hasn’t received their benefits package yet or finalized their beneficiaries</strong>, and it’s my job to <strong>get you caught up with all the other members</strong> and get everything mailed out to you.</em></p>
+
+        <hr>
+
+        <span class="phone-step">SETTING THE APPOINTMENT</span><br>
+        <p><em>We do everything over a quick video meeting rather than coming out to your house. Did I catch you at work, or are you home right now?</em></p>
+
+        <p><strong>If home:</strong> <em>Okay, is this a good number to text? I’ll send you a link to our online benefits portal so you have it ready.</em></p>
+        <p><em>What time do you usually get off work?</em></p>
+
+        <p><em>I do run a pretty busy schedule, but I have a spot at (day/time) or (day/time). Which time works best for you and <span class="VERBALChar spouseDisplay">SPOUSE</span>?</em></p>
+        <p><em>Perfect! Got you locked in.</em></p>
+
+        <hr>
+
+        <span class="phone-step">SOLIDIFY THE APPOINTMENT</span><br>
+        <p><em>Now, is there any reason why you wouldn’t be available at (day/time)?</em></p>
+
+        <p><em>This is super important, and the union requires us to go over everything with each member <strong>since we can only see each family one at a time</strong>. So I’ll give you a call at (day/time), and like I said, it’s just a quick video meeting. Okay? Talk to you then!</em></p>
+
+        <hr>
+        </ul>
+    </div>
+</span>
         </div>
 
         <!-- Right Column -->
